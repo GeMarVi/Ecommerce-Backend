@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6690EE1-AFDA-4B47-81A1-7782AD75A5B4}|Ecommerce.Services\\Ecommerce.Services.csproj|c:\\users\\gerso\\onedrive\\escritorio\\ecommerce\\ecommerce\\ecommerce.services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6690EE1-AFDA-4B47-81A1-7782AD75A5B4}|Ecommerce.Services\\Ecommerce.Services.csproj|solutionrelative:ecommerce.services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6690EE1-AFDA-4B47-81A1-7782AD75A5B4}|Ecommerce.Services\\Ecommerce.Services.csproj|c:\\users\\gerso\\onedrive\\escritorio\\ecommerce\\ecommerce\\ecommerce.services\\iservices\\iproductservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6690EE1-AFDA-4B47-81A1-7782AD75A5B4}|Ecommerce.Services\\Ecommerce.Services.csproj|solutionrelative:ecommerce.services\\iservices\\iproductservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BB32E1A-B1E3-4994-8567-018543154B1B}|Ecommerce.Data\\Ecommerce.Data.csproj|c:\\users\\gerso\\onedrive\\escritorio\\ecommerce\\ecommerce\\ecommerce.data\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BB32E1A-B1E3-4994-8567-018543154B1B}|Ecommerce.Data\\Ecommerce.Data.csproj|solutionrelative:ecommerce.data\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02AAB4B5-FEC3-4542-963A-480EBA056856}|UnitTest\\UnitTest.csproj|c:\\users\\gerso\\onedrive\\escritorio\\ecommerce\\ecommerce\\unittest\\apitest\\productscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02AAB4B5-FEC3-4542-963A-480EBA056856}|UnitTest\\UnitTest.csproj|solutionrelative:unittest\\apitest\\productscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{092F7304-086D-4CF5-8C55-C3ACA56917D3}|Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\gerso\\onedrive\\escritorio\\ecommerce\\ecommerce\\ecommerce.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{092F7304-086D-4CF5-8C55-C3ACA56917D3}|Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:ecommerce.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Data\\Repository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "Ecommerce.Data\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T05:45:51.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProductServices.cs",
+              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\IServices\\IProductServices.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Services\\IServices\\IProductServices.cs",
+              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\IServices\\IProductServices.cs",
+              "RelativeToolTip": "Ecommerce.Services\\IServices\\IProductServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T01:24:22.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\ProductServices.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Services\\ProductServices.cs",
+              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\ProductServices.cs",
+              "RelativeToolTip": "Ecommerce.Services\\ProductServices.cs",
+              "ViewState": "AQIAAIkBAAAAAAAAAAAiwEEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T03:56:16.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Ecommerce.Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T03:14:27.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\UnitTest\\ApiTest\\ProductsControllerTest.cs",
+              "RelativeDocumentMoniker": "UnitTest\\ApiTest\\ProductsControllerTest.cs",
+              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\UnitTest\\ApiTest\\ProductsControllerTest.cs",
+              "RelativeToolTip": "UnitTest\\ApiTest\\ProductsControllerTest.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAIwFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T03:11:53.202Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

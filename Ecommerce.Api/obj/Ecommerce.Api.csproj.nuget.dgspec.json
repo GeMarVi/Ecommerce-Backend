@@ -1,0 +1,504 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Ecommerce.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Ecommerce.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Ecommerce.Api.csproj",
+        "projectName": "Ecommerce.Api",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\Ecommerce.Api.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj"
+              },
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj"
+              },
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\Ecommerce.Services.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\Ecommerce.Services.csproj"
+              },
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj",
+        "projectName": "Ecommerce.Data",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj",
+        "projectName": "Ecommerce.Model",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj",
+        "projectName": "Ecommerce.ServicesDependencies",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "mercadopago-sdk": {
+              "target": "Package",
+              "version": "[2.3.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\Ecommerce.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\Ecommerce.Services.csproj",
+        "projectName": "Ecommerce.Services",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\Ecommerce.Services.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Data\\Ecommerce.Data.csproj"
+              },
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.ServicesDependencies\\Ecommerce.ServicesDependencies.csproj"
+              },
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj",
+        "projectName": "Ecommerce.Shared",
+        "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\Ecommerce.Shared.csproj",
+        "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj": {
+                "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Ecommerce\\Ecommerce\\Ecommerce.Model\\Ecommerce.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

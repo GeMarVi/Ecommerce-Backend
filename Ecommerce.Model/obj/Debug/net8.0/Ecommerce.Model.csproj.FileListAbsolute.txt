@@ -1,0 +1,13 @@
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Model.deps.json
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Model.dll
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Model.pdb
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.csproj.AssemblyReference.cache
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.AssemblyInfoInputs.cache
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.AssemblyInfo.cs
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.csproj.CoreCompileInputs.cache
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.sourcelink.json
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.dll
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\refint\Ecommerce.Model.dll
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Model.pdb
+C:\Users\gerso\OneDrive\Escritorio\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\ref\Ecommerce.Model.dll
