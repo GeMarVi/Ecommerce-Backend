@@ -1,0 +1,23 @@
+[
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "UserRegister",
+    "RelativePath": "api/User/v1/user-register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

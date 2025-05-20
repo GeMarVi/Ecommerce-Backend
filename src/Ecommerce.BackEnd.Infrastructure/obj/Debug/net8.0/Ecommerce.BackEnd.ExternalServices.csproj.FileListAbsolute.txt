@@ -1,0 +1,15 @@
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.deps.json
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.csproj.AssemblyReference.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.AssemblyInfoInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.AssemblyInfo.cs
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerc.5E3B9D39.Up2Date
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\refint\Ecommerce.BackEnd.ExternalServices.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.ExternalServices.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\ref\Ecommerce.BackEnd.ExternalServices.dll

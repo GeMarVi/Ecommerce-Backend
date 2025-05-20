@@ -1,0 +1,15 @@
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.deps.json
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.AssemblyInfo.cs
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerc.9160F63D.Up2Date
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Infrastructure.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\Ecommerce.BackEnd.Infrastructure.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Infrastructure\obj\Debug\net8.0\ref\Ecommerce.BackEnd.Infrastructure.dll

@@ -1,0 +1,22 @@
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.deps.json
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.AssemblyInfoInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.AssemblyInfo.cs
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Dtos\obj\Debug\net8.0\ref\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.deps.json
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.AssemblyInfoInputs.cache
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.AssemblyInfo.cs
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\ref\Ecommerce.BackEnd.Shared.dll
