@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "r8XGrAiGZm4=",
-  "success": false,
+  "dgSpecHash": "ek399/f7QE4=",
+  "success": true,
   "projectFilePath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerso\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512",
@@ -16,15 +16,5 @@
     "C:\\Users\\gerso\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\gerso\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.10.0\\system.identitymodel.tokens.jwt.8.10.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

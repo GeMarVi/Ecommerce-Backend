@@ -12,7 +12,7 @@ namespace Ecommerce.BackEnd.UseCases
             => services.AddScoped<UserRegister>()
             .AddScoped<UserLogin>()
             .AddScoped<EmailConfirm>()
-            .AddScoped<GetNewRefreshToken>()
+            .AddScoped<GetNewTokens>()
             .AddScoped<NewVerificationCode>();
     }    
 }

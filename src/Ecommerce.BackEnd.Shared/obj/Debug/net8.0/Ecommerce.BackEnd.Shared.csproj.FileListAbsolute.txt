@@ -20,3 +20,4 @@ C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Shared.dll
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\ref\Ecommerce.BackEnd.Shared.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Shared\obj\Debug\net8.0\Ecommerce.BackEnd.Shared.sourcelink.json

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "jj2uv1t+lbY=",
-  "success": false,
+  "dgSpecHash": "fFBWE91Td50=",
+  "success": true,
   "projectFilePath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Api\\Ecommerce.Backend.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerso\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -70,33 +70,5 @@
     "C:\\Users\\gerso\\.nuget\\packages\\system.text.json\\9.0.5\\system.text.json.9.0.5.nupkg.sha512",
     "C:\\Users\\gerso\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.ExternalServices.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.ExternalServices.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Services\\Ecommerce.BackEnd.UseCases.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Services\\Ecommerce.BackEnd.UseCases.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

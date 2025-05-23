@@ -1,5 +1,4 @@
-﻿
-namespace Ecommerce.BackEnd.Shared.Configuration
+﻿namespace Ecommerce.BackEnd.Shared.Configuration
 {
     public class SmtpSettings
     {

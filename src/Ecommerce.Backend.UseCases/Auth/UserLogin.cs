@@ -1,52 +1,71 @@
 ﻿using Ecommerce.BackEnd.Data.IRepository;
 using Ecommerce.BackEnd.Data.Models;
+using Ecommerce.BackEnd.Infrastructure.Auth;
 using Ecommerce.BackEnd.Shared.AuthDto;
 using ROP;
 
 namespace Ecommerce.BackEnd.UseCases.Auth
 {
-    class UserLogin
+    public class UserLogin
     {
         private readonly IUserRepository _user;
-        public UserLogin(IUserRepository user)
+        private readonly IJwtTokenGenerator _jwtTokenGenerator;
+        public UserLogin(IUserRepository user, IJwtTokenGenerator jwtTokenGenerator)
         {
             _user = user;
+            _jwtTokenGenerator = jwtTokenGenerator;
         }
 
-        public async Task<Result<UserResponseDto>> Execute(RegisterUserDto loginUserDto)
+        public async Task<Result<UserTokensResponseDto>> Execute(RegisterUserDto loginUserDto)
         {
-            return await DoesUserExist(loginUserDto.Email)
-                .Bind(_ => VerifyCredentials(loginUserDto))
-                .Combine(GenerateToken)
-                .Bind(CreateResponse);
-        }
-
-        private async Task<Result<Unit>> DoesUserExist(string email)
-        {
-            var exist = await _user.DoesUserExistByEmail(email);
-            return exist.Success ? Result.Success() : Result.Failure<Unit>("Invalid Payload");
+            return await VerifyCredentials(loginUserDto)
+                .Combine(GenerateJwtToken)
+                .Bind(GenerateRefreshToken);
         }
 
         private async Task<Result<ApplicationUser>> VerifyCredentials(RegisterUserDto loginUserDto)
         {
-            return await _user.UserLogin(loginUserDto.Email, loginUserDto.Password);
+            var user = await _user.UserLogin(loginUserDto.Email, loginUserDto.Password);
+
+            if (!user.Success)
+                return Result.Failure<ApplicationUser>(user.Errors);
+
+            var isConfirm = await _user.IsEmailConfirm(loginUserDto.Email);
+
+            if(!isConfirm.Success)
+                return Result.Failure<ApplicationUser>(isConfirm.Errors);
+
+            if (!isConfirm.Value)
+                return Result.Failure<ApplicationUser>("User need to be confirm");
+          
+            return user.Value;
         }
 
-        private async Task<Result<JwtGeneratorResponseDto>> GenerateToken(ApplicationUser user)
+        private Result<JwtResponseDto> GenerateJwtToken(ApplicationUser user)
         {
-            var token = await _jwtGenerator.GenerateToken(user);
-            return token.Success
-                ? Result.Success<JwtGeneratorResponseDto>(token.Value)
-                : Result.Failure<JwtGeneratorResponseDto>(token.Errors);
+            var token = _jwtTokenGenerator.GenerateJwtToken("User", user.Id, user.Email!, null);
+            return !token.Success
+                ? Result.Failure<JwtResponseDto>(token.Errors)
+                : Result.Success<JwtResponseDto>(token.Value);
         }
 
-        private Result<UserResponseDto> CreateResponse((ApplicationUser user, JwtGeneratorResponseDto tokens) items)
+        private Result<UserTokensResponseDto> GenerateRefreshToken((ApplicationUser user, JwtResponseDto token) items)
         {
-            return new UserResponseDto()
+            var refresh = _jwtTokenGenerator.GenerateRefreshToken(items.token.TokenId, DateTime.UtcNow.AddMonths(1), items.user.Id);
+            if (!refresh.Success)
+                return Result.Failure<UserTokensResponseDto>(refresh.Errors);
+
+            var mapper = Mappers.ToRefreshToken(refresh.Value);
+
+            var refreshDb = _user.CreateRefreshToken(mapper);
+
+            if (!refresh.Success)
+                return Result.Failure<UserTokensResponseDto>(refresh.Errors);
+
+            return new  UserTokensResponseDto
             {
-                User_Id = items.user.Id,
-                Token = items.tokens.Token,
-                RefreshToken = items.tokens.RefreshToken
+                RefreshToken = refresh.Value.Token,
+                Token = items.token.Token
             };
         }
     }

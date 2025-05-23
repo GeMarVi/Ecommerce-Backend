@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -24,12 +24,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ecommerce.BackEnd.Data\Ecommerce.BackEnd.Data.csproj" />
-    <ProjectReference Include="..\Ecommerce.BackEnd.Dtos\Ecommerce.BackEnd.Shared.csproj" />
-    <ProjectReference Include="..\Ecommerce.BackEnd.Infrastructure\Ecommerce.BackEnd.ExternalServices.csproj" />
     <ProjectReference Include="..\Ecommerce.BackEnd.Infrastructure\Ecommerce.BackEnd.Infrastructure.csproj" />
     <ProjectReference Include="..\Ecommerce.BackEnd.Shared\Ecommerce.BackEnd.Shared.csproj" />
     <ProjectReference Include="..\Ecommerce.Backend.UseCases\Ecommerce.BackEnd.UseCases.csproj" />
-    <ProjectReference Include="..\Services\Ecommerce.BackEnd.UseCases.csproj" />
   </ItemGroup>
-
 </Project>
