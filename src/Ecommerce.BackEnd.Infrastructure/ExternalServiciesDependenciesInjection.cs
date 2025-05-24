@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecommerce.BackEnd.Infrastructure
 {
-    public static class ExternalServiciesDependenciesInjection
+    public static class InfrastructureDependenciesInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         => services.Infrastructure();

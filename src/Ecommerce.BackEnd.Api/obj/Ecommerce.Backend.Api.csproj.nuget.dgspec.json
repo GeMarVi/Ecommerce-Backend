@@ -35,12 +35,6 @@
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Data\\Ecommerce.BackEnd.Data.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Data\\Ecommerce.BackEnd.Data.csproj"
               },
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj"
-              },
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.ExternalServices.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.ExternalServices.csproj"
-              },
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.Infrastructure.csproj"
               },
@@ -49,9 +43,6 @@
               },
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.Backend.UseCases\\Ecommerce.BackEnd.UseCases.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.Backend.UseCases\\Ecommerce.BackEnd.UseCases.csproj"
-              },
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Services\\Ecommerce.BackEnd.UseCases.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Services\\Ecommerce.BackEnd.UseCases.csproj"
               }
             }
           }
@@ -162,8 +153,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj"
+              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj": {
+                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj"
               }
             }
           }
@@ -251,9 +242,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj"
-              },
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj"
               }
@@ -404,9 +392,6 @@
             "projectReferences": {
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Data\\Ecommerce.BackEnd.Data.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Data\\Ecommerce.BackEnd.Data.csproj"
-              },
-              "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj": {
-                "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj"
               },
               "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Infrastructure\\Ecommerce.BackEnd.Infrastructure.csproj"

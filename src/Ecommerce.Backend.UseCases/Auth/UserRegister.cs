@@ -15,7 +15,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
             _user = user;
             _email = email;
         }
-        public async Task<Result<Unit>> Execute(RegisterUserDto user)
+        public async Task<Result<string>> Execute(RegisterUserDto user)
         {
             return await ValidateUser(user)
                 .Combine(_ => CreateVerificationCode())
@@ -55,10 +55,16 @@ namespace Ecommerce.BackEnd.UseCases.Auth
                 : Result.Failure<(RegisterUserDto, VerificationCode)>(sendEmail.Errors);
         }
 
-        private async Task<Result<Unit>> SaveUser((RegisterUserDto user, VerificationCode code) items)
+        private async Task<Result<string>> SaveUser((RegisterUserDto user, VerificationCode code) items)
         {
+            var id = Guid.NewGuid().ToString();
             var newUser = Mappers.ToApplicationUser(items.user);
-            return await _user.UserRegister(newUser, items.user.Password, items.code);
+            newUser.Id = id;
+            var result = await _user.UserRegister(newUser, items.user.Password, items.code);
+            if (!result.Success)
+                return Result.Failure<string>(result.Errors);
+
+            return id;
         }
     }
 }

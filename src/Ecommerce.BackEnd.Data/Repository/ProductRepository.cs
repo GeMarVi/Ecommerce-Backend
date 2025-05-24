@@ -2,9 +2,9 @@
 using System.Linq.Expressions;
 using ROP;
 using Ecommerce.BackEnd.Data.Data;
-using Ecommerce.Shared.DTOs;
 using Ecommerce.BackEnd.Data.IRepository;
 using Ecommerce.BackEnd.Data.Models;
+using Ecommerce.BackEnd.Shared.ProductDto;
 
 namespace Ecommerce.BackEnd.Data.Repository
 {

@@ -14,5 +14,19 @@ namespace Ecommerce.BackEnd.UseCases.Auth
                 EmailConfirmed = false,
             };
         }
+
+        public static RefreshToken ToRefreshToken(RefreshTokenDto dto)
+        {
+            return new RefreshToken
+            {
+                JwtId = dto.JwtId,
+                Token = dto.Token,
+                AddedDate = dto.AddedDate,
+                ExpiryDate = dto.ExpiryDate,
+                IsRevoked = dto.IsRevoked,
+                IsUsed = dto.IsUsed,
+                UserId = dto.UserId
+            };
+        }
     }
 }

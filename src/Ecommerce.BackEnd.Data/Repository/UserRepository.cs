@@ -47,14 +47,15 @@ namespace Ecommerce.BackEnd.Data.Repository
             }
         }
 
-        public async Task<Result<VerificationCode>> UserVerificationCode(string id)
+        public async Task<Result<VerificationCode>> UserVerificationCode(string id, string code)
         {
             try
             {
                 var result = await _db.VerificationCodes.AsNoTracking()
-                    .Where(p => p.User_Id == id && p.ExpirationTime > DateTime.UtcNow)
+                    .Where(p => p.User_Id == id && p.Code == code)
                     .FirstOrDefaultAsync();
-                return result != null ? Result.Success(result) : Result.Failure<VerificationCode>("Verification code not found");
+                return result != null ? Result.Success(result) 
+                    : Result.Failure<VerificationCode>("Verification code not found");
             }
             catch (Exception ex)
             {
@@ -82,20 +83,23 @@ namespace Ecommerce.BackEnd.Data.Repository
             }
         }
 
-        public async Task<Result<Unit>> UserConfirm(ApplicationUser user, VerificationCode verificationCode)
+        public async Task<Result<Unit>> UserConfirmAndRevokeVerificationCode(ApplicationUser user, VerificationCode verificationCode)
         {
             try
             {
                 using var transaction = await _db.Database.BeginTransactionAsync();
-                await _userManager.UpdateAsync(user);
-                _db.VerificationCodes.Remove(verificationCode);
+
+               await _userManager.UpdateAsync(user);
+
+               _db.VerificationCodes.Remove(verificationCode);
+
                 await _db.SaveChangesAsync();
                 await transaction.CommitAsync();
                 return Result.Success();
             }
-            catch (Exception ex)
+            catch
             {
-                return Result.Failure<Unit>("An error happend while update data" + ex.Message);
+                return Result.Failure<Unit>("An unexpected error occurred.");
             }
         }
 
@@ -104,13 +108,33 @@ namespace Ecommerce.BackEnd.Data.Repository
             try
             {
                 var user = await _userManager.FindByEmailAsync(email);
-                if (user == null || !await _userManager.CheckPasswordAsync(user, password))
+                if (user == null)
+                    return Result.Failure<ApplicationUser>("User doest not exist");
+
+                if (!await _userManager.CheckPasswordAsync(user, password))
                     return Result.Failure<ApplicationUser>("Invalid credentials");
                 return Result.Success(user);
             }
             catch (Exception ex)
             {
                 return Result.Failure<ApplicationUser>(ex.Message);
+            }
+        }
+
+        public async Task<Result<bool>> IsEmailConfirm(string email)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                    return Result.Failure<bool>("User doest not exist");
+
+                var confirm = await _userManager.IsEmailConfirmedAsync(user);
+               
+                return confirm;
+            }
+            catch (Exception ex) { 
+                return Result.Failure<bool>("Something went wrong. Please try again later.");
             }
         }
 

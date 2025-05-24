@@ -3,6 +3,7 @@ using System.Net.Mail;
 using Microsoft.Extensions.Options;
 using ROP;
 using System.Net;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ecommerce.BackEnd.Infrastructure.Email
 {
@@ -29,7 +30,7 @@ namespace Ecommerce.BackEnd.Infrastructure.Email
             }
             catch (Exception ex)
             {
-                return Result.Failure<Unit>("Ha ocurrido un error en el servicio de envio de correo");
+                return Result.Failure<Unit>("An error occurred while sending the email.");
             }
         }
     }

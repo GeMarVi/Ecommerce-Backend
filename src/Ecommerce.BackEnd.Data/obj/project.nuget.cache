@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "nwuv1b8KPaI=",
-  "success": false,
+  "dgSpecHash": "+45WZQvZX6w=",
+  "success": true,
   "projectFilePath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Data\\Ecommerce.BackEnd.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerso\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -55,15 +55,5 @@
     "C:\\Users\\gerso\\.nuget\\packages\\system.text.json\\9.0.5\\system.text.json.9.0.5.nupkg.sha512",
     "C:\\Users\\gerso\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -547,7 +547,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj",
       "Ecommerce.BackEnd.Shared >= 1.0.0",
       "Microsoft.Extensions.Options >= 9.0.5",
       "Netmentor.ROP >= 1.8.0",
@@ -586,9 +585,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj": {
-              "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj"
-            },
             "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj": {
               "projectPath": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Shared\\Ecommerce.BackEnd.Shared.csproj"
             }
@@ -643,16 +639,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "No se encuentra el proyecto \"C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj\". Compruebe que la referencia al proyecto sea válida y que exista el archivo de proyecto.",
-      "libraryId": "C:\\Users\\gerso\\Desktop\\Ecommerce-BackEnd\\src\\Ecommerce.BackEnd.Dtos\\Ecommerce.BackEnd.Shared.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

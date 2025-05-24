@@ -1,6 +1,90 @@
 [
   {
     "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "GetNewTokens",
+    "RelativePath": "api/User/v1/get-new-tokens",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokensRequestDto",
+        "Type": "Ecommerce.BackEnd.Shared.AuthDto.TokensRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "GetNewVerificationCode",
+    "RelativePath": "api/User/v1/get-new-verification-code/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "TestAuth",
+    "RelativePath": "api/User/v1/test-auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "UserConfirm",
+    "RelativePath": "api/User/v1/user-confirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "UserLogin",
+    "RelativePath": "api/User/v1/user-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
     "Method": "UserRegister",
     "RelativePath": "api/User/v1/user-register",
     "HttpMethod": "POST",
