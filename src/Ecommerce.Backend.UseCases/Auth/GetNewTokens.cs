@@ -14,18 +14,18 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 {
     public class GetNewTokens
     {
-        private readonly IUserRepository _user;
+        private readonly IAuthRepository _user;
         private readonly JwtConfig _jwtConfig;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
 
-        public GetNewTokens(IUserRepository user, IOptions<JwtConfig> jwtConfig, IJwtTokenGenerator jwtTokenGenerator)
+        public GetNewTokens(IAuthRepository user, IOptions<JwtConfig> jwtConfig, IJwtTokenGenerator jwtTokenGenerator)
         {
             _user = user;
             _jwtConfig = jwtConfig.Value;
             _jwtTokenGenerator = jwtTokenGenerator;
         }
 
-        public async Task<Result<UserTokensResponseDto>> Execute(TokensRequestDto tokensRequestDto)
+        public async Task<Result<TokensResponseDto>> Execute(TokensRequestDto tokensRequestDto)
         {
             return await ValidateAccessToken(tokensRequestDto.Token)
                 .Async()
@@ -70,7 +70,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 
         private async Task<Result<RefreshToken>> GetRefreshTokenDb(string refreshToken, string jti)
         {
-            var result = await _user.TokenIsValid(refreshToken);
+            var result = await _user.ValidateRefreshToken(refreshToken);
             if (!result.Success)
                 return Result.Failure<RefreshToken>(result.Errors);
 
@@ -115,7 +115,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 
         private async Task<Result<ApplicationUser>> GetUser(RefreshToken refreshToken)
         {
-            var result = await _user.GetUserById(refreshToken.UserId);
+            var result = await _user.GetIdentityById(refreshToken.UserId);
             if (!result.Success)
                 return Result.Failure<ApplicationUser>(result.Errors);
             
@@ -128,13 +128,13 @@ namespace Ecommerce.BackEnd.UseCases.Auth
             return result.Value;
         }
 
-        private Result<UserTokensResponseDto> CreateAccessToken((RefreshToken storedToken, ApplicationUser user) args)
+        private Result<TokensResponseDto> CreateAccessToken((RefreshToken storedToken, ApplicationUser user) args)
         {
             var newToken = _jwtTokenGenerator.GenerateJwtToken("User", args.user.Id, args.user.Email!, args.storedToken.JwtId);
             if (!newToken.Success)
-                return Result.Failure<UserTokensResponseDto>(newToken.Errors);
+                return Result.Failure<TokensResponseDto>(newToken.Errors);
 
-            return new UserTokensResponseDto
+            return new TokensResponseDto
             {
                 Token = newToken.Value.Token,
                 RefreshToken = args.storedToken.Token,

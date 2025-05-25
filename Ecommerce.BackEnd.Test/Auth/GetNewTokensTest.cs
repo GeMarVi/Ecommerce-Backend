@@ -6,8 +6,7 @@ using Ecommerce.BackEnd.Shared.Configuration;
 using Ecommerce.BackEnd.UseCases.Auth;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Moq;
-using Newtonsoft.Json.Linq;
+using Moq;    
 using ROP;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,7 +16,7 @@ namespace Ecommerce.BackEnd.Test.Auth
 {
     public class GetNewTokensTests
     {
-        private readonly Mock<IUserRepository> _userRepositoryMock = new();
+        private readonly Mock<IAuthRepository> _userRepositoryMock = new();
         private readonly Mock<IJwtTokenGenerator> _jwtGeneratorMock = new();
         private readonly JwtConfig _jwtConfig = new() { Secret = "0123456789ABCDEF0123456789ABCDEF" };
 
@@ -73,7 +72,7 @@ namespace Ecommerce.BackEnd.Test.Auth
 
             var user = new ApplicationUser { Id = userId, Email = "test@example.com" };
 
-            _userRepositoryMock.Setup(x => x.TokenIsValid(refreshTokenStr))
+            _userRepositoryMock.Setup(x => x.ValidateRefreshToken(refreshTokenStr))
                 .ReturnsAsync(Result.Success(storedRefreshToken));
 
             _userRepositoryMock.Setup(x => x.UpdateRefreshToken(It.IsAny<RefreshToken>()))
@@ -85,7 +84,7 @@ namespace Ecommerce.BackEnd.Test.Auth
             _userRepositoryMock.Setup(x => x.CreateRefreshToken(It.IsAny<RefreshToken>()))
                 .ReturnsAsync(Result.Success());
 
-            _userRepositoryMock.Setup(x => x.GetUserById(userId))
+            _userRepositoryMock.Setup(x => x.GetIdentityById(userId))
                 .ReturnsAsync(Result.Success(user));
 
             _jwtGeneratorMock.Setup(x => x.GenerateJwtToken("User", userId, user.Email, jwtId))
@@ -111,7 +110,7 @@ namespace Ecommerce.BackEnd.Test.Auth
             var accessToken = GenerateFakeAccessToken(jwtId, userId);
             var input = new TokensRequestDto { Token = accessToken, RefreshToken = "invalid" };
 
-            _userRepositoryMock.Setup(x => x.TokenIsValid("invalid"))
+            _userRepositoryMock.Setup(x => x.ValidateRefreshToken("invalid"))
                 .ReturnsAsync(Result.Failure<RefreshToken>("Invalid token"));
 
             var service = CreateService();
@@ -142,7 +141,7 @@ namespace Ecommerce.BackEnd.Test.Auth
                 UserId = userId
             };
 
-            _userRepositoryMock.Setup(x => x.TokenIsValid("expired"))
+            _userRepositoryMock.Setup(x => x.ValidateRefreshToken("expired"))
                 .ReturnsAsync(Result.Success(expiredToken));
 
             var input = new TokensRequestDto { Token = accessToken, RefreshToken = "expired" };

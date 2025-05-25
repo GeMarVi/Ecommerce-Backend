@@ -6,29 +6,32 @@ using Ecommerce.BackEnd.Shared.AuthDto;
 
 namespace Ecommerce.BackEnd.UseCases.Auth
 {
-    public class UserRegister
+    public class Register
     {
-        private readonly IUserRepository _user;
+        private readonly IAuthRepository _user;
         private readonly IEmailServices _email;
-        public UserRegister(IUserRepository user, IEmailServices email)
+        private string _role { get; set; } = default!;
+
+        public Register(IAuthRepository user, IEmailServices email)
         {
             _user = user;
             _email = email;
         }
-        public async Task<Result<string>> Execute(RegisterUserDto user)
+        public async Task<Result<string>> Execute(RegisterDto user, string role)
         {
+            _role = role;
             return await ValidateUser(user)
                 .Combine(_ => CreateVerificationCode())
                 .Bind(SendEmailVerificationCode)
                 .Bind(SaveUser);
         }
 
-        private async Task<Result<RegisterUserDto>> ValidateUser(RegisterUserDto user)
+        private async Task<Result<RegisterDto>> ValidateUser(RegisterDto user)
         {
-            var exist = await _user.DoesUserExistByEmail(user.Email);
+            var exist = await _user.IdentityExistsByEmail(user.Email);
             return exist.Success && exist.Value == true
-                ? Result.Failure<RegisterUserDto>("User already exists")
-                : user.Success();
+                ? Result.Failure<RegisterDto>("User already exists")
+                : user;
         }
 
         private Result<VerificationCode> CreateVerificationCode()
@@ -41,7 +44,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
             return verificationCode;
         }
 
-        private async Task<Result<(RegisterUserDto, VerificationCode)>> SendEmailVerificationCode((RegisterUserDto user, VerificationCode code) items)
+        private async Task<Result<(RegisterDto, VerificationCode)>> SendEmailVerificationCode((RegisterDto user, VerificationCode code) items)
         {
             var subject = "Verify your Email";
             var emailBody = $@"
@@ -52,15 +55,22 @@ namespace Ecommerce.BackEnd.UseCases.Auth
             var sendEmail = await _email.SendEmail(items.user.Email, subject, emailBody);
             return sendEmail.Success
                 ? items
-                : Result.Failure<(RegisterUserDto, VerificationCode)>(sendEmail.Errors);
+                : Result.Failure<(RegisterDto, VerificationCode)>(sendEmail.Errors);
         }
 
-        private async Task<Result<string>> SaveUser((RegisterUserDto user, VerificationCode code) items)
+        private async Task<Result<string>> SaveUser((RegisterDto user, VerificationCode code) args)
         {
             var id = Guid.NewGuid().ToString();
-            var newUser = Mappers.ToApplicationUser(items.user);
+            var newUser = Mappers.ToApplicationUser(args.user);
             newUser.Id = id;
-            var result = await _user.UserRegister(newUser, items.user.Password, items.code);
+            var register = new RegisterData<ApplicationUser, VerificationCode>
+            {
+                Identity = newUser,
+                VerificationCode = args.code,
+                Password = args.user.Password,
+                Role = _role
+            };
+            var result = await _user.RegisterIdentity(register);
             if (!result.Success)
                 return Result.Failure<string>(result.Errors);
 

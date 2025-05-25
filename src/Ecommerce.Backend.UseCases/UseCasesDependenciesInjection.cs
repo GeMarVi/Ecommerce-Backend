@@ -9,10 +9,13 @@ namespace Ecommerce.BackEnd.UseCases
             => services.User();
 
         private static IServiceCollection User(this IServiceCollection services)
-            => services.AddScoped<UserRegister>()
-            .AddScoped<UserLogin>()
+            => services.AddScoped<Register>()
+            .AddScoped<Login>()
             .AddScoped<EmailConfirm>()
             .AddScoped<GetNewTokens>()
-            .AddScoped<NewVerificationCode>();
+            .AddScoped<NewVerificationCode>()
+            .AddScoped<Logout>()
+            .AddScoped<CreateNewRole>()
+            .AddScoped<DeleteIdentity>();
     }    
 }

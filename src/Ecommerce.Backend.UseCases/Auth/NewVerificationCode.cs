@@ -7,10 +7,10 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 {
     public class NewVerificationCode
     {
-        private readonly IUserRepository _user;
+        private readonly IAuthRepository _user;
         private readonly IEmailServices _email;
 
-        public NewVerificationCode(IUserRepository user, IEmailServices email)
+        public NewVerificationCode(IAuthRepository user, IEmailServices email)
         {
             _user = user;
             _email = email;
@@ -43,7 +43,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 
         private async Task<Result<ApplicationUser>> VerifyUser(string userId)
         {
-            return await _user.GetUserById(userId);
+            return await _user.GetIdentityById(userId);
         }
 
         private async Task<Result<Unit>> SendNewEmail(string code, string email)

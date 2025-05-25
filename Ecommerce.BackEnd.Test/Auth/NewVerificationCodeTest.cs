@@ -30,13 +30,13 @@ namespace Ecommerce.BackEnd.Test.Auth
                 Email = email
             };
 
-            var userRepoMock = new Mock<IUserRepository>();
+            var userRepoMock = new Mock<IAuthRepository>();
             var emailServiceMock = new Mock<IEmailServices>();
 
             userRepoMock.Setup(r => r.UpdateVerificationCode(It.IsAny<VerificationCode>()))
                         .ReturnsAsync(Result.Success(verificationCode));
 
-            userRepoMock.Setup(r => r.GetUserById(userId))
+            userRepoMock.Setup(r => r.GetIdentityById(userId))
                         .ReturnsAsync(Result.Success(user));
 
             emailServiceMock.Setup(e => e.SendEmail(email, It.IsAny<string>(), It.IsAny<string>()))
@@ -57,7 +57,7 @@ namespace Ecommerce.BackEnd.Test.Auth
         {
             var userId = Guid.NewGuid().ToString();
 
-            var userRepoMock = new Mock<IUserRepository>();
+            var userRepoMock = new Mock<IAuthRepository>();
             var emailServiceMock = new Mock<IEmailServices>();
 
             userRepoMock.Setup(r => r.UpdateVerificationCode(It.IsAny<VerificationCode>()))
@@ -78,13 +78,13 @@ namespace Ecommerce.BackEnd.Test.Auth
             var code = "123456";
             var verificationCode = new VerificationCode { Code = code, User_Id = userId };
 
-            var userRepoMock = new Mock<IUserRepository>();
+            var userRepoMock = new Mock<IAuthRepository>();
             var emailServiceMock = new Mock<IEmailServices>();
 
             userRepoMock.Setup(r => r.UpdateVerificationCode(It.IsAny<VerificationCode>()))
                         .ReturnsAsync(Result.Success(verificationCode));
 
-            userRepoMock.Setup(r => r.GetUserById(userId))
+            userRepoMock.Setup(r => r.GetIdentityById(userId))
                         .ReturnsAsync(Result.Failure<ApplicationUser>("User not found"));
 
             var useCase = new NewVerificationCode(userRepoMock.Object, emailServiceMock.Object);
@@ -103,13 +103,13 @@ namespace Ecommerce.BackEnd.Test.Auth
             var verificationCode = new VerificationCode { Code = code, User_Id = userId };
             var user = new ApplicationUser { Id = userId, Email = "user@example.com" };
 
-            var userRepoMock = new Mock<IUserRepository>();
+            var userRepoMock = new Mock<IAuthRepository>();
             var emailServiceMock = new Mock<IEmailServices>();
 
             userRepoMock.Setup(r => r.UpdateVerificationCode(It.IsAny<VerificationCode>()))
                         .ReturnsAsync(Result.Success(verificationCode));
 
-            userRepoMock.Setup(r => r.GetUserById(userId))
+            userRepoMock.Setup(r => r.GetIdentityById(userId))
                         .ReturnsAsync(Result.Success(user));
 
             emailServiceMock.Setup(e => e.SendEmail(user.Email!, It.IsAny<string>(), It.IsAny<string>()))

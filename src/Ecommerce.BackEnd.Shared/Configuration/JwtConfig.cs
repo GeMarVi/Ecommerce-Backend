@@ -3,6 +3,6 @@
     public class JwtConfig
     {
         public string Secret { get; set; }
-        public TimeSpan ExpiryTime { get; set; }
+        public Double ExpiryTime { get; set; }
     }
 }

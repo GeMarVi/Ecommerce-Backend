@@ -8,24 +8,29 @@ using Ecommerce.BackEnd.Data.Models;
 
 namespace Ecommerce.BackEnd.Test.Auth
 {
-    public class RegisterUserTest
+    public class RegisterTest
     {
+        private string _role {  get; }
+        public RegisterTest()
+        {
+            _role = "fake-role";
+        }
 
-           [Fact]
+        [Fact]
             public async Task Execute_ShouldRegisterUserSuccessfully_WhenEmailDoesNotExist()
             {
                 // Arrange
-                var mockUserRepo = new Mock<IUserRepository>();
+                var mockUserRepo = new Mock<IAuthRepository>();
                 var mockEmailService = new Mock<IEmailServices>();
-
-                var registerUserDto = new RegisterUserDto
+                         
+                var registerUserDto = new RegisterDto
                 {
                     Email = "test@example.com",
                     Password = "SecurePassword123"
                 };
 
                 mockUserRepo
-                    .Setup(x => x.DoesUserExistByEmail(registerUserDto.Email))
+                    .Setup(x => x.IdentityExistsByEmail(registerUserDto.Email))
                     .ReturnsAsync(Result.Success(false));
 
                 mockEmailService
@@ -33,13 +38,14 @@ namespace Ecommerce.BackEnd.Test.Auth
                     .ReturnsAsync(Result.Success());
 
                 mockUserRepo
-                    .Setup(x => x.UserRegister(It.IsAny<ApplicationUser>(), registerUserDto.Password, It.IsAny<VerificationCode>()))
+                    .Setup(x => x.RegisterIdentity(It.IsAny <RegisterData<ApplicationUser, VerificationCode>> ()))
                     .ReturnsAsync(Result.Success());
 
-                var useCase = new UserRegister(mockUserRepo.Object, mockEmailService.Object);
+
+            var useCase = new Register(mockUserRepo.Object, mockEmailService.Object);
 
                 // Act
-                var result = await useCase.Execute(registerUserDto);
+                var result = await useCase.Execute(registerUserDto, _role);
 
                 // Assert
                 Assert.True(result.Success);
@@ -49,23 +55,23 @@ namespace Ecommerce.BackEnd.Test.Auth
             public async Task Execute_ShouldFail_WhenEmailAlreadyExists()
             {
                 // Arrange
-                var mockUserRepo = new Mock<IUserRepository>();
+                var mockUserRepo = new Mock<IAuthRepository>();
                 var mockEmailService = new Mock<IEmailServices>();
 
-                var registerUserDto = new RegisterUserDto
+                var registerUserDto = new RegisterDto
                 {
                     Email = "existing@example.com",
                     Password = "password"
                 };
 
                 mockUserRepo
-                    .Setup(x => x.DoesUserExistByEmail(registerUserDto.Email))
+                    .Setup(x => x.IdentityExistsByEmail(registerUserDto.Email))
                     .ReturnsAsync(Result.Success(true)); // Email ya registrado
 
-                var useCase = new UserRegister(mockUserRepo.Object, mockEmailService.Object);
+                var useCase = new Register(mockUserRepo.Object, mockEmailService.Object);
 
                 // Act
-                var result = await useCase.Execute(registerUserDto);
+                var result = await useCase.Execute(registerUserDto, _role);
 
                 // Assert
                 Assert.False(result.Success);
