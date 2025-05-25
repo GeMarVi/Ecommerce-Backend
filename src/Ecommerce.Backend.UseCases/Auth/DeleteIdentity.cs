@@ -3,11 +3,11 @@ using ROP;
 
 namespace Ecommerce.BackEnd.UseCases.Auth
 {
-    public class DeleteUser
+    public class DeleteIdentity
     {
         private readonly IAuthRepository _auth;
 
-        public DeleteUser(IAuthRepository auth)
+        public DeleteIdentity(IAuthRepository auth)
         {
             _auth = auth;
         }

@@ -67,7 +67,7 @@ namespace Ecommerce.Backend.Api.Controllers
         [HttpPost("v1/delete-user")]
         [Authorize(Roles = "User")]
         [InjectUserId]
-        public async Task<IActionResult> CreateRole(DeleteUser deleteUser)
+        public async Task<IActionResult> CreateRole(DeleteIdentity deleteUser)
         {
             var userId = HttpContext.Items["UserId"]?.ToString();
 

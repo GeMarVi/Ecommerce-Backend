@@ -16,6 +16,6 @@ namespace Ecommerce.BackEnd.UseCases
             .AddScoped<NewVerificationCode>()
             .AddScoped<Logout>()
             .AddScoped<CreateNewRole>()
-            .AddScoped<DeleteUser>();
+            .AddScoped<DeleteIdentity>();
     }    
 }
