@@ -31,15 +31,15 @@ namespace Ecommerce.BackEnd.Test.Auth
                 EmailConfirmed = false
             };
 
-            var userRepoMock = new Mock<IUserRepository>();
+            var userRepoMock = new Mock<IAuthRepository>();
 
-            userRepoMock.Setup(r => r.UserVerificationCode(userId, codeValue))
+            userRepoMock.Setup(r => r.GetVerificationCode(userId, codeValue))
                         .ReturnsAsync(Result.Success(verificationCode));
 
-            userRepoMock.Setup(r => r.GetUserById(userId))
+            userRepoMock.Setup(r => r.GetIdentityById(userId))
                         .ReturnsAsync(Result.Success(user));
 
-            userRepoMock.Setup(r => r.UserConfirmAndRevokeVerificationCode(user, verificationCode))
+            userRepoMock.Setup(r => r.ConfirmIdentityAndRevokeCode(user, verificationCode))
                         .ReturnsAsync(Result.Success());
 
             var useCase = new EmailConfirm(userRepoMock.Object);
@@ -60,8 +60,8 @@ namespace Ecommerce.BackEnd.Test.Auth
             var codeValue = "invalid";
             var codeConfirmDto = new CodeConfirmDto { id = userId, code = codeValue };
 
-            var userRepoMock = new Mock<IUserRepository>();
-            userRepoMock.Setup(r => r.UserVerificationCode(userId, codeValue))
+            var userRepoMock = new Mock<IAuthRepository>();
+            userRepoMock.Setup(r => r.GetVerificationCode(userId, codeValue))
                         .ReturnsAsync(Result.Failure<VerificationCode>("Invalid verification code."));
 
             var useCase = new EmailConfirm(userRepoMock.Object);
@@ -89,8 +89,8 @@ namespace Ecommerce.BackEnd.Test.Auth
                 ExpirationTime = DateTime.UtcNow.AddMinutes(-5)
             };
 
-            var userRepoMock = new Mock<IUserRepository>();
-            userRepoMock.Setup(r => r.UserVerificationCode(userId, codeValue))
+            var userRepoMock = new Mock<IAuthRepository>();
+            userRepoMock.Setup(r => r.GetVerificationCode(userId, codeValue))
                         .ReturnsAsync(Result.Success(expiredCode));
 
             var useCase = new EmailConfirm(userRepoMock.Object);

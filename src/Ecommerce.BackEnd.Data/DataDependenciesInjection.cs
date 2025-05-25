@@ -10,8 +10,7 @@ namespace Ecommerce.Backend.Data
           => services.Repository();
 
         private static IServiceCollection Repository(this IServiceCollection services)
-            => services.AddScoped<IAdminRepository, AdminRepository>()
-               .AddScoped<IUserRepository, UserRepository>()
+            => services.AddScoped<IAuthRepository, AuthRepository>()
                .AddScoped<ICreateOrderRepository, CreateOrderRepository>()
                .AddScoped<IProductRepository, ProductRepository>()
                .AddScoped<IPurchaseRepository, PurchaseRepository>();

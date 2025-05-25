@@ -2,7 +2,7 @@
 
 namespace Ecommerce.BackEnd.Shared.AuthDto
 {
-    public class RegisterUserDto
+    public class RegisterDto
     {
         [Required(ErrorMessage = "El correo es obligatorio")]
         [EmailAddress]

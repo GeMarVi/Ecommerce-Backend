@@ -7,8 +7,8 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 {
     public class EmailConfirm
     {
-        private readonly IUserRepository _user;
-        public EmailConfirm(IUserRepository user)
+        private readonly IAuthRepository _user;
+        public EmailConfirm(IAuthRepository user)
         {
             _user = user;
         }
@@ -21,7 +21,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 
         private async Task<Result<VerificationCode>> CodeValidation(CodeConfirmDto codeConfirm)
         {
-            var code = await _user.UserVerificationCode(codeConfirm.id ,codeConfirm.code);
+            var code = await _user.GetVerificationCode(codeConfirm.id ,codeConfirm.code);
 
             if (!code.Success)
                 return Result.Failure<VerificationCode>("Invalid verification code.");
@@ -36,11 +36,11 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 
         private async Task<Result<Unit>> UserConfirmAndRevokeCode(VerificationCode verificationCode)
         {
-            var user = await _user.GetUserById(verificationCode.User_Id);
+            var user = await _user.GetIdentityById(verificationCode.User_Id);
             if (!user.Success)
                 return Result.Failure<Unit>(user.Errors);
             user.Value.EmailConfirmed = true;
-            return await _user.UserConfirmAndRevokeVerificationCode(user.Value, verificationCode);
+            return await _user.ConfirmIdentityAndRevokeCode(user.Value, verificationCode);
         }
     }
 }

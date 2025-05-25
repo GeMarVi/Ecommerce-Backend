@@ -1,5 +1,73 @@
 [
   {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.AdminController",
+    "Method": "UserLogin",
+    "RelativePath": "api/Admin/v1/admin-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.AdminController",
+    "Method": "UserRegister",
+    "RelativePath": "api/Admin/v1/admin-register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.AdminController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Admin/v1/create-new-role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRoleDto",
+        "Type": "Ecommerce.BackEnd.Shared.AuthDto.CreateRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "CreateRole",
+    "RelativePath": "api/User/v1/delete-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
     "Method": "GetNewTokens",
     "RelativePath": "api/User/v1/get-new-tokens",
@@ -33,8 +101,18 @@
   },
   {
     "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
-    "Method": "TestAuth",
-    "RelativePath": "api/User/v1/test-auth",
+    "Method": "TestAuthAdmin",
+    "RelativePath": "api/User/v1/test-auth-admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "TestAuthUser",
+    "RelativePath": "api/User/v1/test-auth-user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -58,6 +136,22 @@
         "Name": "code",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
+    "Method": "UserLogout",
+    "RelativePath": "api/User/v1/user-log-out",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLogoutDto",
+        "Type": "Ecommerce.BackEnd.Shared.AuthDto.LogoutDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

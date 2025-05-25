@@ -5,7 +5,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
 {
     static class Mappers
     {
-        public static ApplicationUser ToApplicationUser(RegisterUserDto registerUserDto)
+        public static ApplicationUser ToApplicationUser(RegisterDto registerUserDto)
         {
             return new ApplicationUser
             {
