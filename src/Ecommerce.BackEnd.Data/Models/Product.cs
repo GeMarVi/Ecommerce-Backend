@@ -62,8 +62,14 @@ namespace Ecommerce.BackEnd.Data.Models
         [MaxLength(30)]
         public string ProductStatus { get; set; }
 
+        [Required]
         [Range(0, 100)]
-        public byte DiscountRate { get; set; }
+        public int? Priority { get; set; } = 0;
+
+        public bool? IsDeleted { get; set; } = false;
+
+        [Range(0, 100)]
+        public decimal DiscountRate { get; set; } = 0;
 
         public List<ApplicationUser> Users { get; set; }
         public List<ImagesProduct> ImagesProduct { get; set; }

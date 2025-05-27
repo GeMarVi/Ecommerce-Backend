@@ -37,7 +37,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("ApplicationUserProduct");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ApplicationUser", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
@@ -104,7 +104,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.DiscountCoupon", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.DiscountCoupon", b =>
                 {
                     b.Property<int>("DiscountCoupon_Id")
                         .ValueGeneratedOnAdd()
@@ -128,7 +128,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("DiscountCoupons");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ImagesProduct", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ImagesProduct", b =>
                 {
                     b.Property<int>("Images_Id")
                         .ValueGeneratedOnAdd()
@@ -151,7 +151,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("ImagesProducts");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Order", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Order", b =>
                 {
                     b.Property<Guid>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -200,7 +200,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.OrderItem", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.OrderItem", b =>
                 {
                     b.Property<long>("OrderItemId")
                         .ValueGeneratedOnAdd()
@@ -257,7 +257,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("OrderItem");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.OrderStatus", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.OrderStatus", b =>
                 {
                     b.Property<int>("OrderStatus_Id")
                         .ValueGeneratedOnAdd()
@@ -275,7 +275,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("OrderStatus");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.PaymentDetails", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.PaymentDetails", b =>
                 {
                     b.Property<int>("PaymentDetails_Id")
                         .ValueGeneratedOnAdd()
@@ -309,7 +309,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("PaymentDetails");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Product", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Product", b =>
                 {
                     b.Property<int>("Product_Id")
                         .ValueGeneratedOnAdd()
@@ -340,13 +340,16 @@ namespace Ecommerce.BackEnd.Data.Migrations
                         .HasMaxLength(10000)
                         .HasColumnType("character varying(10000)");
 
-                    b.Property<byte>("DiscountRate")
-                        .HasColumnType("smallint");
+                    b.Property<decimal>("DiscountRate")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
+
+                    b.Property<bool?>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -360,6 +363,9 @@ namespace Ecommerce.BackEnd.Data.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
+
+                    b.Property<int>("Priority")
+                        .HasColumnType("integer");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
@@ -389,7 +395,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ProductEvaluation", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ProductEvaluation", b =>
                 {
                     b.Property<int>("ProductEvaluation_Id")
                         .ValueGeneratedOnAdd()
@@ -428,7 +434,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("ProductEvaluations");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.RefreshToken", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.RefreshToken", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -465,7 +471,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("RefreshTokens");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ShipmentInfo", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ShipmentInfo", b =>
                 {
                     b.Property<Guid>("ShipmentInfo_Id")
                         .ValueGeneratedOnAdd()
@@ -533,7 +539,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("ShipmentInfo");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.SizeStock", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.SizeStock", b =>
                 {
                     b.Property<int>("SizeStock_Id")
                         .ValueGeneratedOnAdd()
@@ -557,7 +563,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("SizeStocks");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Tax", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Tax", b =>
                 {
                     b.Property<int>("Tax_Id")
                         .ValueGeneratedOnAdd()
@@ -613,7 +619,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("Taxs");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.UserPaymentInformation", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.UserPaymentInformation", b =>
                 {
                     b.Property<int>("UserPaymentInformation_Id")
                         .ValueGeneratedOnAdd()
@@ -644,7 +650,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.ToTable("ClientPaymentInformation");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.VerificationCode", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.VerificationCode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -804,22 +810,22 @@ namespace Ecommerce.BackEnd.Data.Migrations
 
             modelBuilder.Entity("ApplicationUserProduct", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Product", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsProduct_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.ApplicationUser", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ImagesProduct", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ImagesProduct", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Product", "Product")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Product", "Product")
                         .WithMany("ImagesProduct")
                         .HasForeignKey("Product_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -828,25 +834,25 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Order", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Order", b =>
                 {
-                    b.HasOne("Ecommerce.Model.DiscountCoupon", "DiscountCoupon")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.DiscountCoupon", "DiscountCoupon")
                         .WithMany("Orders")
                         .HasForeignKey("DiscountCouponId");
 
-                    b.HasOne("Ecommerce.Model.OrderStatus", "OrderStatus")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.OrderStatus", "OrderStatus")
                         .WithMany("Orders")
                         .HasForeignKey("OrderStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.ShipmentInfo", "ShipmentInfo")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ShipmentInfo", "ShipmentInfo")
                         .WithMany("orders")
                         .HasForeignKey("ShippmentInfo_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "User")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
 
@@ -859,15 +865,15 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.OrderItem", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.OrderItem", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Order", "Order")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Order", "Order")
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.Product", "product")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Product", "product")
                         .WithMany("orderItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -878,30 +884,30 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("product");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.PaymentDetails", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.PaymentDetails", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Order", "Order")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Order", "Order")
                         .WithOne("PaymentDetails")
-                        .HasForeignKey("Ecommerce.Model.PaymentDetails", "OrderId")
+                        .HasForeignKey("Ecommerce.BackEnd.Data.Models.PaymentDetails", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ProductEvaluation", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ProductEvaluation", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Order", "Order")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Order", "Order")
                         .WithMany()
                         .HasForeignKey("Order_Id");
 
-                    b.HasOne("Ecommerce.Model.Product", "product")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Product", "product")
                         .WithMany()
                         .HasForeignKey("Product_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "user")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "user")
                         .WithMany()
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -914,18 +920,18 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("user");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ShipmentInfo", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ShipmentInfo", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "user")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "user")
                         .WithMany("Shipments")
                         .HasForeignKey("User_Id");
 
                     b.Navigation("user");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.SizeStock", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.SizeStock", b =>
                 {
-                    b.HasOne("Ecommerce.Model.Product", "Product")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.Product", "Product")
                         .WithMany("sizeStocks")
                         .HasForeignKey("Product_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -934,29 +940,29 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Tax", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Tax", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "Client")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "Client")
                         .WithOne("Tax")
-                        .HasForeignKey("Ecommerce.Model.Tax", "Client_Id")
+                        .HasForeignKey("Ecommerce.BackEnd.Data.Models.Tax", "Client_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Client");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.UserPaymentInformation", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.UserPaymentInformation", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "User")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "User")
                         .WithOne("UserPaymentInformation")
-                        .HasForeignKey("Ecommerce.Model.UserPaymentInformation", "User_Id");
+                        .HasForeignKey("Ecommerce.BackEnd.Data.Models.UserPaymentInformation", "User_Id");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.VerificationCode", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.VerificationCode", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", "user")
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", "user")
                         .WithMany()
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -976,7 +982,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -985,7 +991,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1000,7 +1006,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommerce.Model.ApplicationUser", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1009,14 +1015,14 @@ namespace Ecommerce.BackEnd.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Ecommerce.Model.ApplicationUser", null)
+                    b.HasOne("Ecommerce.BackEnd.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ApplicationUser", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Shipments");
 
@@ -1025,12 +1031,12 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("UserPaymentInformation");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.DiscountCoupon", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.DiscountCoupon", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Order", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
 
@@ -1038,12 +1044,12 @@ namespace Ecommerce.BackEnd.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.OrderStatus", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.OrderStatus", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.Product", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.Product", b =>
                 {
                     b.Navigation("ImagesProduct");
 
@@ -1052,7 +1058,7 @@ namespace Ecommerce.BackEnd.Data.Migrations
                     b.Navigation("sizeStocks");
                 });
 
-            modelBuilder.Entity("Ecommerce.Model.ShipmentInfo", b =>
+            modelBuilder.Entity("Ecommerce.BackEnd.Data.Models.ShipmentInfo", b =>
                 {
                     b.Navigation("orders");
                 });

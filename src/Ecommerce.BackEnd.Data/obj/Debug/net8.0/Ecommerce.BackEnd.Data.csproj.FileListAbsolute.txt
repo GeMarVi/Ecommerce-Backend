@@ -15,21 +15,21 @@ C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Data\obj\Debug\net8.0\r
 C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
 C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
 C:\Users\gerso\Desktop\Facturacion 4.0\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerc.12D1F565.Up2Date
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.csproj.AssemblyReference.cache
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.AssemblyInfoInputs.cache
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.AssemblyInfo.cs
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.csproj.CoreCompileInputs.cache
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.sourcelink.json
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.dll
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Data.dll
-C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.pdb
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Data.deps.json
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Data.runtimeconfig.json
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Data.dll
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Data.pdb
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.dll
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\bin\Debug\net8.0\Ecommerce.BackEnd.Shared.pdb
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.csproj.AssemblyReference.cache
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.AssemblyInfoInputs.cache
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.AssemblyInfo.cs
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.csproj.CoreCompileInputs.cache
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.sourcelink.json
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerc.12D1F565.Up2Date
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\refint\Ecommerce.BackEnd.Data.dll
+C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.pdb
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\Ecommerce.BackEnd.Data.genruntimeconfig.cache
 C:\Users\gerso\Desktop\Ecommerce-BackEnd\src\Ecommerce.BackEnd.Data\obj\Debug\net8.0\ref\Ecommerce.BackEnd.Data.dll

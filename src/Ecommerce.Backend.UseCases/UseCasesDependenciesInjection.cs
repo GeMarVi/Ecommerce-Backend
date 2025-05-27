@@ -1,4 +1,5 @@
 ﻿using Ecommerce.BackEnd.UseCases.Auth;
+using Ecommerce.BackEnd.UseCases.Products;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecommerce.BackEnd.UseCases
@@ -6,7 +7,7 @@ namespace Ecommerce.BackEnd.UseCases
     public static class UseCasesDependencyInjection
     {
         public static IServiceCollection AddUseCases(this IServiceCollection services)
-            => services.User();
+            => services.User().Product();
 
         private static IServiceCollection User(this IServiceCollection services)
             => services.AddScoped<Register>()
@@ -17,5 +18,10 @@ namespace Ecommerce.BackEnd.UseCases
             .AddScoped<Logout>()
             .AddScoped<CreateNewRole>()
             .AddScoped<DeleteIdentity>();
+
+        private static IServiceCollection Product(this IServiceCollection services)
+            => services.AddScoped<GetProducts>()
+              .AddScoped<GetProductsByFilter>();
     }    
+
 }

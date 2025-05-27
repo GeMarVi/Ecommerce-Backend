@@ -58,6 +58,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.ProductController",
+    "Method": "GetPaginatedProduct",
+    "RelativePath": "api/Product/v1/get-products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.ProductController",
+    "Method": "FilterProducts",
+    "RelativePath": "api/Product/v1/get-products-filtered",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Ecommerce.Backend.Api.Controllers.UserController",
     "Method": "CreateRole",
     "RelativePath": "api/User/v1/delete-user",

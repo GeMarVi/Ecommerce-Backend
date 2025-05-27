@@ -10,8 +10,7 @@ namespace Ecommerce.BackEnd.UseCases.Auth
     {
         private readonly IAuthRepository _user;
         private readonly IEmailServices _email;
-        private string _role { get; set; } = default!;
-
+  
         public Register(IAuthRepository user, IEmailServices email)
         {
             _user = user;
@@ -19,11 +18,10 @@ namespace Ecommerce.BackEnd.UseCases.Auth
         }
         public async Task<Result<string>> Execute(RegisterDto user, string role)
         {
-            _role = role;
             return await ValidateUser(user)
-                .Combine(_ => CreateVerificationCode())
-                .Bind(SendEmailVerificationCode)
-                .Bind(SaveUser);
+                .Bind(_ => CreateVerificationCode())
+                .Bind(code => SendEmailVerificationCode(code, user))
+                .Bind( code => SaveUser(code, user, role));
         }
 
         private async Task<Result<RegisterDto>> ValidateUser(RegisterDto user)
@@ -44,31 +42,31 @@ namespace Ecommerce.BackEnd.UseCases.Auth
             return verificationCode;
         }
 
-        private async Task<Result<(RegisterDto, VerificationCode)>> SendEmailVerificationCode((RegisterDto user, VerificationCode code) items)
+        private async Task<Result<VerificationCode>> SendEmailVerificationCode(VerificationCode verificationCode, RegisterDto registerDto)
         {
             var subject = "Verify your Email";
             var emailBody = $@"
             Thank you for registering. Please use the following code to verify your email address:
-            {items.code.Code}
+            {verificationCode.Code}
             If you did not request this, please ignore this email.";
 
-            var sendEmail = await _email.SendEmail(items.user.Email, subject, emailBody);
+            var sendEmail = await _email.SendEmail(registerDto.Email, subject, emailBody);
             return sendEmail.Success
-                ? items
-                : Result.Failure<(RegisterDto, VerificationCode)>(sendEmail.Errors);
+                ? verificationCode
+                : Result.Failure<VerificationCode>(sendEmail.Errors);
         }
 
-        private async Task<Result<string>> SaveUser((RegisterDto user, VerificationCode code) args)
+        private async Task<Result<string>> SaveUser(VerificationCode verificationCode, RegisterDto registerDto, string role)
         {
             var id = Guid.NewGuid().ToString();
-            var newUser = Mappers.ToApplicationUser(args.user);
+            var newUser = Mappers.ToApplicationUser(registerDto);
             newUser.Id = id;
             var register = new RegisterData<ApplicationUser, VerificationCode>
             {
                 Identity = newUser,
-                VerificationCode = args.code,
-                Password = args.user.Password,
-                Role = _role
+                VerificationCode = verificationCode,
+                Password = registerDto.Password,
+                Role = role
             };
             var result = await _user.RegisterIdentity(register);
             if (!result.Success)

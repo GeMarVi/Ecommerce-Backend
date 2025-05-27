@@ -13,7 +13,7 @@ namespace Ecommerce.Backend.Data
             => services.AddScoped<IAuthRepository, AuthRepository>()
                .AddScoped<ICreateOrderRepository, CreateOrderRepository>()
                .AddScoped<IProductRepository, ProductRepository>()
-               .AddScoped<IPurchaseRepository, PurchaseRepository>();
+               .AddScoped<IPurchaseRepository, PurchaseRepository>(); 
                
     }
 }
