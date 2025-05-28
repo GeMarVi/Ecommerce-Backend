@@ -1,7 +1,6 @@
 ﻿using Ecommerce.BackEnd.UseCases.Products;
 using Microsoft.AspNetCore.Mvc;
 using ROP.APIExtensions;
-using static Ecommerce.BackEnd.UseCases.Products.GetProductsByFilter;
 
 namespace Ecommerce.Backend.Api.Controllers
 {
@@ -9,11 +8,7 @@ namespace Ecommerce.Backend.Api.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        public ProductController()
-        {
-            
-        }
-
+     
         [HttpGet("v1/get-products")]
         public async Task<IActionResult> GetPaginatedProduct([FromServices] GetProducts getPaginatedProducts, 
                                                              [FromQuery] int page = 1, 
@@ -23,14 +18,24 @@ namespace Ecommerce.Backend.Api.Controllers
         }
 
         [HttpGet("v1/get-products-filtered")]
-        public async Task<IActionResult> FilterProducts([FromServices] GetProductsByFilter getProductsByFilter,
-                                                        [FromQuery] ProductFilterType filterType,
-                                                        [FromQuery] string keyword,
-                                                        [FromQuery] int page = 1, 
-                                                        [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> FilterProducts(
+                                                         [FromServices] GetProductsByFilter getProductsByFilter,
+                                                         [FromQuery] Dictionary<string, string> filters,
+                                                         [FromQuery] int page = 1,
+                                                         [FromQuery] int pageSize = 10)
         {
-            return await getProductsByFilter.Execute(keyword, page, pageSize, filterType).ToActionResult();
+            filters.Remove("page");
+            filters.Remove("pageSize");
+
+            return await getProductsByFilter.Execute(filters, page, pageSize).ToActionResult();
         }
 
+
+        [HttpGet("v1/get-products-by-name-or-model")]
+        public async Task<IActionResult> FilterProducts([FromServices] GetProductByNameOrModel getProductByName,
+                                                        [FromQuery] string nameOrModel)
+        {
+            return await getProductByName.Execute(nameOrModel).ToActionResult();
+        }
     }
-}
+} 

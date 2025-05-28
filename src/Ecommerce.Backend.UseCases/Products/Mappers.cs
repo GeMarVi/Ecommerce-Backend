@@ -5,7 +5,7 @@ namespace Ecommerce.BackEnd.UseCases.Products
 {
     public static class Mappers
     {
-        public static CompleteProductResponseDto ToCompleteProductResponseDto(Product product)
+        private static CompleteProductResponseDto ToCompleteProductResponseDto(Product product)
         {
             return new CompleteProductResponseDto
             {

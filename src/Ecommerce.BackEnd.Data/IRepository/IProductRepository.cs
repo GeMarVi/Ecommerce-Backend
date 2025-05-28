@@ -8,7 +8,7 @@ namespace Ecommerce.BackEnd.Data.IRepository
     {
         Task<Result<(List<Product>, int)>> GetPaginatedProductsAsync(int page, int pageSize);
         Task<Result<(List<Product>, int)>> GetFilteredProductsAsync(Expression<Func<Product, bool>> filter, int page, int pageSize);
-        //Task<(List<Product>, int)> GetProductsByFilter(Expression<Func<Product, bool>> filter, int page, int pageSize);
+        Task<Result<List<Product>>> GetProductByNameOrModelAsync(string name);
         //Task<(List<Product>, int)> GetProductsByDiscount(int page, int pageZize);
         //Task<(List<Product>, int)> GetProductsByNewProducts(int page, int pageZize);
         ////Task<Result<List<ProductsShoppingCartDto>>> GetProductsShoppingCart(List<int> ids);

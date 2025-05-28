@@ -68,8 +68,30 @@ namespace Ecommerce.BackEnd.Data.Repository
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error while retrieving filtered products from the database.");
-                throw new Exception("Ocurrió un error al obtener los productos filtrados. Intente más tarde o contacte al soporte.", ex);
+                _logger.LogError(ex, "Error accessing the database when retrieving filtered products from the database.");
+                return Result.Failure<(List<Product>, int)>("An error occurred while accessing the product data.");
+            }
+        }
+
+        public async Task<Result<List<Product>>> GetProductByNameOrModelAsync(string name)
+        {
+            try
+            {
+                var productsFound = await _db.Products
+                    .AsNoTracking()
+                    .Where(p => p.ProductName.Contains(name) || p.Model.Contains(name))
+                    .Include(p => p.sizeStocks)
+                    .Include(p => p.ImagesProduct)
+                    .OrderBy(p => p.ProductName)
+                    .Take(10)
+                    .ToListAsync();
+
+                return productsFound;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error accessing the database when retrieving products by name or model.");
+                return Result.Failure<List<Product>>("An error occurred while accessing the product data.");
             }
         }
     }

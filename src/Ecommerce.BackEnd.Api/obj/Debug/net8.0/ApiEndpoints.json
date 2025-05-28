@@ -81,19 +81,30 @@
   {
     "ContainingType": "Ecommerce.Backend.Api.Controllers.ProductController",
     "Method": "FilterProducts",
+    "RelativePath": "api/Product/v1/get-products-by-name-or-model",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nameOrModel",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Backend.Api.Controllers.ProductController",
+    "Method": "FilterProducts",
     "RelativePath": "api/Product/v1/get-products-filtered",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "filterType",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "keyword",
-        "Type": "System.String",
+        "Name": "filters",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {

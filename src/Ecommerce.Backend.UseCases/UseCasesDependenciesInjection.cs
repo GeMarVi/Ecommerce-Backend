@@ -21,7 +21,7 @@ namespace Ecommerce.BackEnd.UseCases
 
         private static IServiceCollection Product(this IServiceCollection services)
             => services.AddScoped<GetProducts>()
-              .AddScoped<GetProductsByFilter>();
+              .AddScoped<GetProductsByFilter>()
+              .AddScoped<GetProductByNameOrModel>();
     }    
-
 }

@@ -161,17 +161,13 @@
         ],
         "parameters": [
           {
-            "name": "filterType",
+            "name": "filters",
             "in": "query",
             "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "keyword",
-            "in": "query",
-            "schema": {
-              "type": "string"
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
             }
           },
           {
@@ -190,6 +186,27 @@
               "type": "integer",
               "format": "int32",
               "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/v1/get-products-by-name-or-model": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "nameOrModel",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
         ],
